@@ -28,14 +28,14 @@ const App = () => {
           <input type='text'  value={input} onChange={(e)=>setInput(e.target.value)}/>
           <button onClick={add}>Add Todo</button>
          </div>
-         <div>
+         <ul>
            {tasks.length>0 && tasks.map((task,index)=>{
-            return <ul style={{display:'flex',justifyContent:'space-between'}} key={index}>
+            return <li style={{display:'flex',justifyContent:'space-between'}} key={index}>
              <span>{task}</span> 
              <button onClick={()=>deleteTask(task)}>Delete</button>
-            </ul>
+            </li>
            })}
-         </div>
+         </ul>
     </div>
   )
 }
