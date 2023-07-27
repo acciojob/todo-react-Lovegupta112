@@ -21,7 +21,7 @@ const App = () => {
 
 
   return (
-    <div>
+    <div style={{textAlign:'center'}}>
         {/* Do not remove the main div */}
         <p>To-Do List</p>
          <div>
@@ -30,10 +30,10 @@ const App = () => {
          </div>
          <div>
            {tasks.length>0 && tasks.map((task,index)=>{
-            return <div style={{display:'flex',justifyContent:'space-between'}} key={index}>
+            return <ul style={{display:'flex',justifyContent:'space-between'}} key={index}>
              <span>{task}</span> 
              <button onClick={()=>deleteTask(task)}>Delete</button>
-            </div>
+            </ul>
            })}
          </div>
     </div>
